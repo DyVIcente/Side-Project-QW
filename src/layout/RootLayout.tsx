@@ -6,7 +6,7 @@ export default function RootLayout() {
     <div>
       <ScrollRestoration />
       <Header />
-      <main className="min-h-[100vh]">
+      <main className="min-h-[100vh] bg-[#0F0F1A]">
         <Outlet />
       </main>
       <Footer />

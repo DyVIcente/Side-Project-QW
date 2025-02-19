@@ -1,12 +1,13 @@
 export default function Header() {
   return (
-    <div className="bg-black shadow-md p-4">
+    <div className="shadow-xl shadow-cyan-500 p-4 bg-[#0F0F1A] relative">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-        <h1 className="text-6xl flex gap-4 text-[#fafafa]">Side Project</h1>
-        <p className="text-2xl md:text-6xl text-[#fafafa] text-end md:text-start">
-          koukou
-        </p>
+        <h1 className="font-extrabold text-[24px] leading-[30px] text-white">
+          Netrunner.QW
+        </h1>
+        <p className="text-white">search bar</p>
       </div>
+      <div className="absolute w-[50%] inset-0 gradient-01"></div>
     </div>
   );
 }
