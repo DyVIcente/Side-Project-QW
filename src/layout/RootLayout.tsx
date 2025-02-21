@@ -1,15 +1,18 @@
 import { Outlet, ScrollRestoration } from "react-router-dom";
-import { Header, Footer } from "../components";
-
+import { Header, Footer, AppSidebar } from "../components";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 export default function RootLayout() {
   return (
-    <div>
-      <ScrollRestoration />
-      <Header />
-      <main className="min-h-[100vh] bg-[#0F0F1A]">
-        <Outlet />
-      </main>
+    <>
+      <SidebarProvider>
+        <AppSidebar />
+        <main>
+          <Header />
+          <SidebarTrigger />
+          <Outlet />
+        </main>
+      </SidebarProvider>
       <Footer />
-    </div>
+    </>
   );
 }
