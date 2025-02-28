@@ -6,12 +6,17 @@ import {
 } from "react-router-dom";
 
 import RootLayout from "../layout/RootLayout";
-import { Home, Error } from "../pages";
+import { Home, Error, Game } from "../pages";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<RootLayout />}>
       <Route path="/" index element={<Home />} errorElement={<Error />} />
+      <Route
+        path="/game/:title/:gameId"
+        errorElement={<Error />}
+        element={<Game />}
+      />
       <Route path="*" element={<Error />} />
     </Route>
   )
